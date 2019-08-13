@@ -5,17 +5,16 @@ from datetime import datetime
 
 # Config Vars -------------------------------------------------------------------------------------------------------------------
 # set public_ip to the ip people will connect to, if this is hosted on the same server it'll just use whatever localhost will be
-ip = "minhi.hikki.io:25565"
+ip = "SERVER IP HERE"
 public_ip = ip
 modpack_name = "All the Mods 3 Remix"
 status_interval = 10
-channel_id = "610897385106833412"
+channel_id = "CHANNEL ID HERE"
+botToken = "BOT TOKEN HERE"
 # -------------------------------------------------------------------------------------------------------------------------------
 
 server = mcserver.lookup(ip)
 status = server.status()
-
-botToken = "NjEwODgzMzgyMTI5NDU5MjMw.XVLviw.0-HWqj6fP7q60xMJ3uHufYGaM0U"
 client = discord.Client()
 
 def get_status():
