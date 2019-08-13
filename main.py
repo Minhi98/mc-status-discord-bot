@@ -41,13 +41,11 @@ async def on_message(message):
         plist = get_players()
         channel = client.get_channel(int(channel_id))
 
-        if plist == None:
-            await channel.send("No players online currently")
-        else:
-            str_plist = "Players Online:\n```\n"
-            for p in plist: str_plist += p + "\n"
-            str_plist += "```"
-            await channel.send(str_plist)
+        str_plist = "Players Online:\n```\n"
+        for p in plist: str_plist += p + "\n"
+        str_plist += "```"
+        if plist == []: str_plist = "No one is online currently"
+        await channel.send(str_plist)
 
 @client.event
 async def on_ready():
